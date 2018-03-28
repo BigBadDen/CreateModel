@@ -1,0 +1,6 @@
+HenaBody = FieldValueUtils.GetItemFieldValue(confirmationItem,"Hena Body"),
+HenaCanadaAddition = FieldValueUtils.GetItemFieldValue(confirmationItem,"Hena Canada Addition"),
+AgencyUrnHeader = FieldValueUtils.GetItemFieldValue(confirmationItem,"Agency Urn Header"),
+AgencyUrnHint = FieldValueUtils.GetItemFieldValue(confirmationItem,"Agency Urn Hint"),
+AgencyUrnError = FieldValueUtils.GetItemFieldValue(confirmationItem,"Agency Urn Error"),
+SubmittingApplicationMessage = FieldValueUtils.GetItemFieldValue(confirmationItem,"Submitting Application Message"),
