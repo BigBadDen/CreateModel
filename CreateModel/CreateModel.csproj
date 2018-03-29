@@ -95,6 +95,12 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DataAPIGeneratorTemplate\DataAPIGeneratorTemplate.csproj">
+      <Project>{B49CF76C-9EEB-4F38-BC15-244974C9B050}</Project>
+      <Name>DataAPIGeneratorTemplate</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

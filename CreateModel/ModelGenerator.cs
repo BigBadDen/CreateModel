@@ -2,28 +2,15 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+using DataAPIGeneratorTemplate;
 
 namespace CreateModel
 {
 
-    class ModelGenerator
+    class ModelGenerator : CodeGeneratorBase, IApiCodeGenerator
     {
-        private static string[] _allModels;
-        public string[] AllModels
-        {
-            get { return _allModels; }
-            set { _allModels = value; }
-        }
-
         public void Run()
         {
             GenerateCode();
@@ -31,7 +18,7 @@ namespace CreateModel
 
         private static string _TARGET_NAMESPACE = "StudyGroup.DataAPI.Models.AgentApplicationForm";
 
-        private static void GenerateCode()
+        public void GenerateCode()
         {
             // ***BEFORE RUNNING*** SET WHERE THE OBJECT MODELS SHOULD BE CREATED:
 
@@ -43,7 +30,7 @@ namespace CreateModel
             {
                 // load file & get json keys...
 
-                string filePath = String.Format(@"D:\Git\CreateModel\CreateModel\Json\{0}.json", modelName);
+                string filePath = $@"D:\Git\CreateModel\CreateModel\Json\{modelName}.json";
 
                 if (!File.Exists(filePath))
                 {
@@ -103,10 +90,10 @@ namespace CreateModel
             returnString.Append("using Newtonsoft.Json;\n");
             returnString.Append("\n");
 
-            returnString.Append(string.Format("namespace {0}\n", _TARGET_NAMESPACE));
+            returnString.Append($"namespace {_TARGET_NAMESPACE}\n");
             returnString.Append("{\n");
             returnString.Append("\n");
-            returnString.Append(String.Format("\tpublic class {0}Object\n", modelName));
+            returnString.Append($"\tpublic class {modelName}Object\n");
             returnString.Append("\t{\n");
 
             return returnString.ToString();
@@ -139,11 +126,6 @@ namespace CreateModel
             return propertyString.ToString();
         }
 
-        private static string ToPascalCase(string theField)
-        {
-            string firstChar = theField.Substring(0, 1);
-            string remaiainingChars = theField.Substring(1, theField.Length - 1);
-            return firstChar.ToUpper() + remaiainingChars;
-        }
+ 
     }
 }

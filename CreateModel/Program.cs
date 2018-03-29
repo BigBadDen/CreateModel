@@ -1,10 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using DataAPIGeneratorTemplate;
 using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 
 namespace CreateModel
@@ -15,8 +10,6 @@ namespace CreateModel
     /// 
     ///     **** To create the models, run the application and hit "O"
     ///     **** To create the correspoding mapper code snippets,  run the application and hit "O"
-    ///     
-    /// 
     /// 
     ///     BEFORE RUNNING:
     ///     =================================================================
@@ -30,15 +23,12 @@ namespace CreateModel
 
     class Program
     {
-
-        // ***BEFORE RUNNING*** set the name of the namespace where the models will reside
-
-        private static string _TARGET_NAMESPACE = "StudyGroup.DataAPI.Models.AgentApplicationForm";
-
-
         // ***BEFORE RUNNING*** set the names of the models to be created:
         //
-        // NB. IF these classes already exist in the target folder and are in TFS, check them out first!!
+        // NB. If the json files aren't found, they will be skipped
+        //
+        // IF these classes already exist in the target folder and are in TFS, check them out first!!
+        //
 
         private static string[] _allModels = new string[] { "CentreSelection",
                                                             "Confirmation",
@@ -57,18 +47,21 @@ namespace CreateModel
 
             ConsoleKeyInfo keyInfo = Console.ReadKey();
 
+            IApiCodeGenerator codeGenerator;
+
+            codeGenerator = new ModelGenerator();
+
             if (keyInfo.Key == ConsoleKey.O)
             {
-                ModelGenerator modelgenerator = new ModelGenerator();
-                modelgenerator.AllModels = _allModels;
-                modelgenerator.Run();
+                codeGenerator = new ModelGenerator();
             }
             else if (keyInfo.Key == ConsoleKey.M)
             {
-                MapperGenerator mapper = new MapperGenerator();
-                mapper.AllModels = _allModels;
-                mapper.Run();
+                codeGenerator = new MapperGenerator();
             }
+
+            codeGenerator.AllModels = _allModels;
+            codeGenerator.Run();
         }
      
     }

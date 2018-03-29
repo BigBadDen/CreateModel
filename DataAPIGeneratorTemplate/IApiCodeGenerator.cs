@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace DataAPIGeneratorTemplate
 {
-    public class Class1
+    public interface IApiCodeGenerator
     {
+        void GenerateCode();
+        void Run();
+
+        string[] AllModels { get; set; }
     }
 }

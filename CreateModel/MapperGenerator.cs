@@ -1,29 +1,22 @@
-﻿using Newtonsoft.Json;
+﻿using DataAPIGeneratorTemplate;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace CreateModel
 {
-    class MapperGenerator
+    class MapperGenerator : CodeGeneratorBase, IApiCodeGenerator
     {
-        private static string[] _allModels; 
-
-        public string[]  AllModels
-        {
-            get { return _allModels; }
-            set { _allModels = value; }
-        }
-
         public void Run()
         {
             GenerateCode();
         }
 
-        private static void GenerateCode()
+        public void GenerateCode()
         {
             // ****************************************************************************************************************************
 
@@ -35,9 +28,7 @@ namespace CreateModel
             {
                 // load file & get json keys...
 
-                string filePath = String.Format(@"D:\Git\CreateModel\CreateModel\Json\{0}.json", modelName);
-
-              
+                string filePath = $@"D:\Git\CreateModel\CreateModel\Json\{modelName}.json";
 
                 if (!File.Exists(filePath))
                 {
@@ -51,9 +42,9 @@ namespace CreateModel
 
                     var theObject = JsonConvert.DeserializeObject(file);
 
-                    Newtonsoft.Json.Linq.JObject jsonObject = (Newtonsoft.Json.Linq.JObject)theObject;
+                    JObject jsonObject = (JObject)theObject;
 
-                    var allKeys = ((IDictionary<string, Newtonsoft.Json.Linq.JToken>)jsonObject).Keys;
+                    var allKeys = ((IDictionary<string, JToken>)jsonObject).Keys;
 
                     // generate a line of code to map the object field to the value of the sitecore item field
 
@@ -61,7 +52,7 @@ namespace CreateModel
 
                     // write file...
 
-                    string newFilePath = String.Format(@"{0}{1}Mapper.cs", targetPath, modelName);
+                    string newFilePath = $@"{targetPath}{modelName}Mapper.cs";
 
                     Console.WriteLine("Writing to:" + newFilePath + "\n\n");
 
@@ -80,48 +71,8 @@ namespace CreateModel
         private static string CreateFieldMapping(string theCamelCaseFieldName, string modelName)
         {
             string thePascalCaseFieldName = ToPascalCase(theCamelCaseFieldName);
-
-            StringBuilder propertyString = new StringBuilder();
-            propertyString.Append(String.Format("{0} = FieldValueUtils.GetItemFieldValue({1}Item,\"{2}\"),", thePascalCaseFieldName, ToCamelCase(modelName), ToPascalCaseWithSpaces(thePascalCaseFieldName)));
-            return propertyString.ToString();
+            return $"{thePascalCaseFieldName} = FieldValueUtils.GetItemFieldValue({ToCamelCase(modelName)}Item,\"{ToPascalCaseWithSpaces(thePascalCaseFieldName)}\"),";
         }
-
-        private static string ToPascalCaseWithSpaces(string thePascalCaseField)
-        {
-            StringBuilder fieldWithSpaces = new StringBuilder();
-
-            for (int i=0; i<thePascalCaseField.Length; i++)
-            {
-                string theCurrentChar = thePascalCaseField.Substring(i, 1);
-                if (theCurrentChar  == theCurrentChar.ToUpper() && i > 0)
-                {
-                    fieldWithSpaces.Append(" ");
-                }
-                fieldWithSpaces.Append(theCurrentChar);
-            }
-            return fieldWithSpaces.ToString().Replace("I E L T S", "IELTS")
-                .Replace("Dob D D", "Dob DD")
-                .Replace("Dob M M", "Dob MM")
-                .Replace("Dob Y Y Y Y", "Dob YYYY")
-                .Replace("D D Placeholder", "DD Placeholder")
-                .Replace("M M Placeholder", "MM Placeholder")
-                .Replace("Y Y Y Y Placeholder", "YYYY Placeholder")
-                .Replace("U K Visa", "UK Visa")
-                ;
-        }
-
-        private static string ToPascalCase(string theField)
-        {
-            string firstChar = theField.Substring(0, 1);
-            string remaiainingChars = theField.Substring(1, theField.Length - 1);
-            return firstChar.ToUpper() + remaiainingChars;
-        }
-
-        private static string ToCamelCase(string theField)
-        {
-            string firstChar = theField.Substring(0, 1);
-            string remaiainingChars = theField.Substring(1, theField.Length - 1);
-            return firstChar.ToLower() + remaiainingChars;
-        }
+     
     }
 }
