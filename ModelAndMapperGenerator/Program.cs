@@ -2,7 +2,7 @@
 using System;
 
 
-namespace CreateModel
+namespace ModelAndMapperGenerator
 {
     /// <summary>
     /// 
@@ -20,8 +20,8 @@ namespace CreateModel
     ///     
     ///     3. Set/check value of allModels string array - to correspond with items in the json folder
     ///
-    ///     4. Set targetPath for the new class in:     a) CreateModel\ModelGenerator.cs
-    ///                                                 b) CreateModel\MapperGenerator.cs
+    ///     4. Set targetPath for the new class in:     a) ModelAndMapperGenerator\ModelGenerator.cs
+    ///                                                 b) ModelAndMapperGenerator\MapperGenerator.cs
     ///                                                 
     ///     5. IF these classes already exist in the target folder and are in TFS, check them out first!!
     ///

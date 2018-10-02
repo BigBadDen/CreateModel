@@ -6,7 +6,7 @@ using Newtonsoft.Json;
 using System.IO;
 using DataAPIGeneratorTemplate;
 
-namespace CreateModel
+namespace ModelAndMapperGenerator
 {
 
     class ModelGenerator : CodeGeneratorBase, IApiCodeGenerator
@@ -22,14 +22,14 @@ namespace CreateModel
         {
             // ***BEFORE RUNNING*** SET WHERE THE OBJECT MODELS SHOULD BE CREATED:
 
-            string targetPath = @"D:\Git\CreateModel\CreateModel\Output\Models\";
+            string targetPath = @"D:\Git\ModelAndMapperGenerator\ModelAndMapperGenerator\Output\Models\";
             //string targetPath = @"D:\Projects\Websites\SitecoreV8Upg\SiteCore\StudyGroup.DataAPI\Models\AgentApplicationForm\";
 
             foreach (string modelName in _allModels)
             {
                 // load file & get json keys...
 
-                string filePath = $@"D:\Git\CreateModel\CreateModel\Json\{modelName}.json";
+                string filePath = $@"D:\Git\ModelAndMapperGenerator\ModelAndMapperGenerator\Json\{modelName}.json";
 
                 if (!File.Exists(filePath))
                 {

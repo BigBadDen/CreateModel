@@ -7,7 +7,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 
-namespace CreateModel
+namespace ModelAndMapperGenerator
 {
     class MapperGenerator : CodeGeneratorBase, IApiCodeGenerator
     {
@@ -20,7 +20,7 @@ namespace CreateModel
         {
             // ****************************************************************************************************************************
 
-            string targetPath = @"D:\Git\CreateModel\CreateModel\Output\Mappers\";
+            string targetPath = @"D:\Git\ModelAndMapperGenerator\ModelAndMapperGenerator\Output\Mappers\";
 
             // ****************************************************************************************************************************
 
@@ -28,7 +28,7 @@ namespace CreateModel
             {
                 // load file & get json keys...
 
-                string filePath = $@"D:\Git\CreateModel\CreateModel\Json\{modelName}.json";
+                string filePath = $@"D:\Git\ModelAndMapperGenerator\ModelAndMapperGenerator\Json\{modelName}.json";
 
                 if (!File.Exists(filePath))
                 {
