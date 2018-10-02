@@ -23,7 +23,6 @@ namespace DataAPIGeneratorTemplate
             return firstChar.ToUpper() + remaiainingChars;
         }
 
-
         public static string ToPascalCaseWithSpaces(string thePascalCaseField)
         {
             StringBuilder fieldWithSpaces = new StringBuilder();
