@@ -23,8 +23,7 @@ namespace CreateModel
             // ***BEFORE RUNNING*** SET WHERE THE OBJECT MODELS SHOULD BE CREATED:
 
             string targetPath = @"D:\Git\CreateModel\CreateModel\Output\Models\";
-
-            // string targetPath = @"D:\Projects\Websites\SitecoreV8Upg\SiteCore\StudyGroup.DataAPI\Models\AgentApplicationForm\";
+            //string targetPath = @"D:\Projects\Websites\SitecoreV8Upg\SiteCore\StudyGroup.DataAPI\Models\AgentApplicationForm\";
 
             foreach (string modelName in _allModels)
             {

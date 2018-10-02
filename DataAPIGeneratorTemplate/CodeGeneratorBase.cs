@@ -45,7 +45,11 @@ namespace DataAPIGeneratorTemplate
                 .Replace("M M Placeholder", "MM Placeholder")
                 .Replace("Y Y Y Y Placeholder", "YYYY Placeholder")
                 .Replace("U K Visa", "UK Visa")
-                .Replace(" U S ", " US ")
+                .Replace("U S", "US")
+                .Replace("U R N", "URN")
+                .Replace("A N Z", "ANZ")
+                .Replace("H E N A", "HENA")
+                .Replace("We Chat","WeChat")
                 ;
         }
 

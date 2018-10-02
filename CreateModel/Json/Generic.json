@@ -1,7 +1,29 @@
- {
-        "applicationLoadErrorHeading": "",
-        "applicationLoadErrorMessage": "",
-        "saveApplicationError": "",
-        "regionModalHeader": "",
-        "regionModalIntro": ""
-    }
+{
+    "headingLabel": "Agent application form",
+    "progressBarCompletedLabel": "Completed",
+    "progressBarSaveLabel": "Save",
+    "progressBarSavingLabel": "Saving",
+    "progressBarSubmitLabel": "Submit",
+    "countryMissingSelectionError": "Please select a country from the available list.",
+    "notificationEnrolmentAge": "Applicant is less than 18 at the time of enrolment. You will need to provide additional information in section 3 - Contact details",
+    "sectionNextLabel": "Next",
+    "sectionPreviousLabel": "Previous",
+    "submittedConfirmationHeading": "Submitted",
+    "submittedConfirmationIntro": "The application was succesfully submitted. What would you like to do next?",
+    "submittedConfirmationStartApplicationLabel": "Start a new application",
+    "submittedConfirmationMyApplicationsLabel": "View my applications",
+    "unknownAgentHeading": "Unknown Agent",
+    "unknownAgentIntro": "Unable to load the application as we don't have a Salesforce Agent Id for you.",
+    "validatorMessageEmptySpace": "Please supply a valid value. Field only contains whitespace",
+    "headerBackToPortalText": "Application forms",
+    "headerLogoutText": "Log out",
+    "headerAgentPortalText": "Agent Portal",
+    "footerConnectWithUsLabel": "Connect with us",
+    "validatorMessageInvalidCharacter": "Field contains an invalid character",
+    "applicationLoadErrorHeading": "Oops, something went wrong!",
+    "applicationLoadErrorMessage": "We were unable to load the application form. This may be a temporary error, please refresh the page and try again.",
+    "saveApplicationError": "An error occurred and we couldn't save the application, please try again to ensure you don't lose any data.",
+    "regionModalHeader": "Select a region",
+    "regionModalIntro": "Please select the region the student wishes to study in:",
+    "headerExitApplication": ""
+}

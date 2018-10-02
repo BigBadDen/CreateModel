@@ -1,3 +1,31 @@
- {
-        "henaPostgradIntro": ""
+{
+        "sectionLabel": "Document upload",
+        "intro": "You can submit this form without supporting documents and still receive a conditional offer, however you will be asked to provide these documents at a later date.",
+        "introANZ": "<p>As a minimum, please upload the following documents with this application in order to receive an offer: </p><ol><li>Academic transcripts</li><li>Copy of the student’s visa (if the student has a current visa) </li></ol>",
+        "submittingDocumentsLabel": "Submit supporting documents at this time?",
+        "submittingDocumentsError": "Please select if you're submitting documents at this time",
+        "certificatesLabel": "Academic certificates / transcripts",
+        "IELTSLabel": "IELTS (or alternative if permitted)",
+        "passportLabel": "Passport",
+        "otherLabel": "Other",
+        "visaLabel": "Visa",
+        "completePackageLabel": "Complete package",
+        "dragDropLabel": "Drag & drop here or <span>click to browse</span>",
+        "dragOverLabel": "Release to upload",
+        "uploadingMessage": "Uploading document(s)",
+        "uploadingSuccess": "Documents were successfully uploaded and the application saved",
+        "uploadInvalidError": "We detected some invalid files which couldn't be uploaded. Files must be no larger than 5mb in size and a valid type ({{placeholder}})",
+        "uploadDuplicateFile": "A document with the same name already exists in this section",
+        "uploadError": "An error occurred uploading your document(s). Please try again.",
+        "documentDeleteDialogTitle": "Remove document?",
+        "documentDeleteDialogIntro": "Are you sure you want to delete {{placeholder}} document from the application?",
+        "documentDeleteDialogCancel": "Cancel",
+        "documentDeleteDialogConfirm": "Yes, remove document",
+        "validatingFiles": "Validating files. This may take some time with large filesizes or lots of files. Please wait...",
+        "uploadDocumentsDialogTitle": "Unable to change value",
+        "uploadDocumentsDialogIntro": "If you don't wish to upload documents, please remove the documents previously uploaded and then select 'no' again.",
+        "uploadDocumentsDialogConfirmLabel": "Close",
+        "uploadErrorMessage": "An error occurred whilst uploading one of more of your documents, please try again.",
+        "deleteErrorMessage": "An error occurred while trying to delete your document, please try again.",
+        "henaPostgradIntro": "<p>There may be additional documentation required in support of post-graduate applications and certain undergraduate majors.  Additional documentation such as a resume, statement of intent/essay, letters of reference, portfolio and/or GRE can be uploaded below.</p>"
     }

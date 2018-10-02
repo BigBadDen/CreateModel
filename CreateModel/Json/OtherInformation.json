@@ -1,4 +1,34 @@
- {
-    "dismissedOrExpelledLabel": "",
-    "anyOtherInformationLabel": ""
-  }
+{
+        "sectionLabel": "Other information",
+        "requiresAccomodationLabel": "Does student require accommodation?",
+        "requiresAccomodationError": "Please select if student requires accommodation",
+        "requiresTransferLabel": "Does student require an airport transfer?",
+        "requiresTransferError": "Please select if student require an airport transfer",
+        "requiresInsuranceLabel": "Does student require insurance?",
+        "requiresInsuranceError": "Please select if student requires insurance",
+        "medicalSpecialNeedsLabel": "Does student have any medical / special needs?",
+        "medicalSpecialNeedsError": "Please select if student has any medical / special needs",
+        "criminalConvictionsLabel": "Does student have any criminal convictions?",
+        "criminalConvictionsError": "Please select if student has any criminal convictions",
+        "additionalNotesLabel": "Any other information to add to your application?",
+        "accommodationDialogTitle": "Unable to change requires accommodation",
+        "accommodationDialogIntro": "The applicant is applying to a Bellerbys centre and is less than {{placeholder}} at the time of enrolment.",
+        "accommodationDialogConfirmLabel": "Close",
+        "preferredAccommodationLabel": "Preferred accommodation type",
+        "preferredAccommodationError": "Please select accommodation type",
+        "roomTypeLabel": "Preferred room type",
+        "roomTypeError": "Please select a preferred room type",
+        "transferAirportDetailsLabel": "If so, does student know which airport they are travelling into?",
+        "transferAirportDetailsError": "Please select which airport you are travelling into",
+        "privateBathroomLabel": "Does student require private bathroom?",
+        "privateBathroomError": "Please select if a bathroom is required",
+        "cateringTypeLabel": "Select catering type",
+        "cateringTypeError": "Please select catering type",
+        "dismissedOrExpelledLabel": "Has the student ever been charged, suspended, removed, dismissed or expelled from any educational institution for academic or disciplinary reasons?",
+        "anyOtherInformationLabel": "Any other information to be added to this application?",
+        "requiresInsuranceNoNote": "Insurance is a requirement. As you have selected 'no' you will be required to provide evidence of alternative insurance cover before the student arrives for their chosen course.",
+        "requiresAccomodationANZLabel": "Does student require assistance with accommodation?",
+        "requiresInsuranceANZLabel": "Does the student require Study Group to arrange an OSHC or Study Care policy?",
+        "requiresInsuranceNoANZNote": "A valid OSHC or Study Care policy is a requirement. As you have selected ‘no’, you will be required to provide evidence of cover before the student arrives for their chosen course.",
+        "insuranceCoverLevelLabel": "What is the level of cover required by the student?"
+    }

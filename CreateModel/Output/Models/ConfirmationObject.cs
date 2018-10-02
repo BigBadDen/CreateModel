@@ -8,6 +8,34 @@ namespace StudyGroup.DataAPI.Models.AgentApplicationForm
 	public class ConfirmationObject
 	{
 
+		[JsonProperty("title")]
+		[XmlElement("Title")]
+		public string Title{
+			get;
+			set;
+		}
+
+		[JsonProperty("body")]
+		[XmlElement("Body")]
+		public string Body{
+			get;
+			set;
+		}
+
+		[JsonProperty("cancelButton")]
+		[XmlElement("CancelButton")]
+		public string CancelButton{
+			get;
+			set;
+		}
+
+		[JsonProperty("confirmButton")]
+		[XmlElement("ConfirmButton")]
+		public string ConfirmButton{
+			get;
+			set;
+		}
+
 		[JsonProperty("henaBody")]
 		[XmlElement("HenaBody")]
 		public string HenaBody{
@@ -46,6 +74,13 @@ namespace StudyGroup.DataAPI.Models.AgentApplicationForm
 		[JsonProperty("submittingApplicationMessage")]
 		[XmlElement("SubmittingApplicationMessage")]
 		public string SubmittingApplicationMessage{
+			get;
+			set;
+		}
+
+		[JsonProperty("agencyUrnPlaceholder")]
+		[XmlElement("AgencyUrnPlaceholder")]
+		public string AgencyUrnPlaceholder{
 			get;
 			set;
 		}

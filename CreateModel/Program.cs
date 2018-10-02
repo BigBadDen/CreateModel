@@ -15,9 +15,13 @@ namespace CreateModel
     ///     =================================================================
     ///     
     ///     1. Add individual files to the json folder - 1 per model 
-    ///     2. Set _TARGET_NAMESPACE, to be used in class opening text
-    ///     3. Set value of allModels string array - to correspond with items in the json folder
-    ///     4. Set targetPath for the new class
+    ///     
+    ///     2. Set/check _TARGET_NAMESPACE, to be used in class opening text (initialised in CreateModel\ModelGenerator.cs)
+    ///     
+    ///     3. Set/check value of allModels string array - to correspond with items in the json folder
+    ///
+    ///     4. Set targetPath for the new class in:     a) CreateModel\ModelGenerator.cs
+    ///                                                 b) CreateModel\MapperGenerator.cs
     ///
     /// </summary>
 
@@ -38,6 +42,7 @@ namespace CreateModel
                                                             "Generic",
                                                             "OtherInformation",
                                                             "StudentDetails",
+                                                            "SecondParentContactDetails",
                                                             "IncompleteApplications"};
 
         static void Main(string[] args)

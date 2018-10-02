@@ -69,12 +69,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="Json\CentreSelection.json" />
     <None Include="Json\Confirmation.json" />
+    <None Include="Json\ContactDetails.json" />
     <None Include="Json\DocumentUpload.json" />
     <None Include="Json\EducationLanguage.json" />
     <None Include="Json\Generic.json" />
     <None Include="Json\IncompleteApplications.json" />
     <None Include="Json\OtherInformation.json" />
+    <None Include="Json\SecondParentContactDetails.json" />
     <None Include="Json\StudentDetails.json" />
     <None Include="packages.config" />
   </ItemGroup>

@@ -1,8 +1,13 @@
- {
-  "henaBody": "",
-  "henaCanadaAddition": "",
-  "agencyUrnHeader": "",
-  "agencyUrnHint": "",
-  "agencyUrnError": "",
-  "submittingApplicationMessage": ""
-  }
+{
+        "title": "",
+        "body": "<p>By pressing submit I agree to the following:-</p><ul><li>That the provided information will be used to process an application to study for the named student</li><li>That I have appropriate authorisation on behalf of the student to supply this information, and that the data is truthful and accurate</li><li>That the supply of incorrect information may lead to the refusal of the application or cancellation of enrolment</li><li>That the supplied information is subject to the published <a href=\"https://agent.studygroup.com/s/Privacy-policy\" target=\"_blank\">privacy policy</a></li><li>I acknowledge that Study Group* will collect and process information relating to the applicant in accordance with the <a href=\"https://corporate.studygroup.com/land/student-privacy-notice\" target=\"_blank\">Privacy Notice for Students</a><br><span style=\"display:block; padding:6px 0 6px 0;\">* ‘Study Group’ includes Study Group UK Limited and its subsidiaries</span></li></ul>",
+        "cancelButton": "Go back",
+        "confirmButton": "Submit",
+        "henaBody": "<p>By pressing submit I agree to the following:-</p>\n<ul>\n    <li>That the provided information will be used to process an application to study for the named student</li>\n    <li>I have the full and express authority and consent of the Student (if over 18), parent or legal guardian to submit this application on their behalf</li>\n    <li>All information submitted in the admission process – including this application and any other supporting materials – is factually true and honestly presented</li>\n    <li>That the supplied information is subject to the published <a href=\"https://agent.studygroup.com/s/Privacy-policy\" target=\"_blank\">privacy policy</a></li>\n<li>I acknowledge that Study Group* will collect and process information relating to the applicant in accordance with the <a href=\"https://corporate.studygroup.com/land/student-privacy-notice\" target=\"_blank\">Privacy Notice for Students</a><br><span style=\"display:block; padding:6px 0 6px 0;\">* ‘Study Group’ includes Study Group UK Limited and its subsidiaries</span></li>\n</ul>",
+        "henaCanadaAddition": "<ul>\r\n    <li>That the student (if over 18), parent or legal guardian consent to the student’s information being stored outside of Canada by Study Group for as long as the student is interested in or studying at RRU in order to answer their questions, assist with their application and improve Study Group’s policies and procedures.</li>\r\n</ul>",
+        "agencyUrnHeader": "Select your agency",
+        "agencyUrnHint": "Please select the URN you want to submit this application under.",
+        "agencyUrnError": "Please select your Agent URN from the available list",
+        "submittingApplicationMessage": "Submitting application",
+        "agencyUrnPlaceholder": "Please select your agent URN"
+}
